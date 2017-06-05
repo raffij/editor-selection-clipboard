@@ -1,0 +1,1 @@
+# editor-selection-clipboard

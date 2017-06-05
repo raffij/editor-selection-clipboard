@@ -1,0 +1,151 @@
+body {
+  font-family: sans-serif;
+  margin: 30px;
+}
+
+.container {
+  max-width: 640px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  margin: 2px 0;
+}
+
+.item .content {
+  flex: 1;
+}
+
+.item .content :focus {
+  outline: 2px solid #2196f3;
+}
+
+.item.is-selected .content {
+  position: relative;
+}
+
+.item.is-selected .content::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background: rgba(0, 0, 255, .15);
+  border-radius: 3px;
+}
+
+.item.image .content {
+  padding: 0.5rem;
+}
+
+.item.image .content img {
+  display: block;
+  max-width: 100%;
+}
+
+.item.image .content input[type=text] {
+  display: block;
+  font: inherit;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.item.image .content input[type=file] {
+  display: block;
+  padding: 0.5rem;
+}
+
+.item.paragraph .content p {
+  line-height: 1.6;
+}
+
+.toolbar {
+  position: relative;
+  margin: 0.5rem;
+}
+
+.toolbar .toggle {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.toolbar .toggle img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+}
+
+.toolbar .toggle:hover img,
+.toolbar .toggle:focus img {
+  opacity: 0.6;
+}
+
+.toolbar .menu {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  padding: 3px;
+  background: white;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.toolbar .menu button {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 3px;
+  margin: 3px;
+  outline: none;
+}
+
+.toolbar .menu button:hover,
+.toolbar .menu button:focus,
+.toolbar .menu button.is-current {
+  border-color: #ddd;
+}
+
+.toolbar .menu img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+}
+
+/* Quill */
+
+.ql-editor {
+  padding: 0.5rem;
+}
+
+.ql-editor p {
+  margin: 0;
+}
+
+.ql-clipboard {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

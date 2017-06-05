@@ -1,0 +1,28 @@
+{
+  "name": "editor-selection-clipboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo example.js -p 8080 --css style.css -- -d -v -g [ babelify --plugins [ transform-es2015-modules-commonjs ] ]"
+  },
+  "keywords": [],
+  "author": "Callum <callum@callumj.uk> (http://callumj.uk/)",
+  "license": "ISC",
+  "dependencies": {
+    "bel": "^5.0.0",
+    "clone": "^2.1.1",
+    "nanobus": "^4.2.0",
+    "nanocomponent": "^5.0.3",
+    "nanomorph": "^5.1.1",
+    "nanoraf": "^3.0.1",
+    "quill": "^1.2.6"
+  },
+  "false": {},
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babelify": "^7.3.0",
+    "budo": "^10.0.3"
+  }
+}
