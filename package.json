@@ -13,6 +13,7 @@
   "dependencies": {
     "bel": "^5.0.0",
     "clone": "^2.1.1",
+    "is-my-json-valid": "^2.16.0",
     "nanobus": "^4.2.0",
     "nanocomponent": "^5.0.3",
     "nanomorph": "^5.1.1",
