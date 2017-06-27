@@ -1,12 +1,11 @@
-const Editor = require('./')
-const Paragraph = require('./lib/block_types/paragraph')
-const Image = require('./lib/block_types/image')
+const SirTrevor = require('./')
+const Paragraph = require('./lib/paragraph')
+const Image = require('./lib/image')
 
-const editor = new Editor()
+const editor = new SirTrevor()
 window.editor = editor
 editor.blockTypes.add(Paragraph)
 editor.blockTypes.add(Image)
-
 document.body.appendChild(editor.ui.element)
 
 editor.blockList.push(new Paragraph({ text: 'BEM has been our go-to solution for writing CSS for a number of years now. We’ve had some good and some not-so-good experiences with it, but overall it’s proven to be a very solid approach to writing CSS for the kinds of projects we have.' }))

@@ -1,15 +1,23 @@
-class Editor {
+const Editor = require('./lib/editor')
+
+class SirTrevor extends Editor {
   constructor () {
-    this.register(require('./lib/modules/block_list'))
-    this.register(require('./lib/modules/block_types'))
-    this.register(require('./lib/modules/history'))
+    super()
     this.register(require('./lib/modules/ui'))
+    this.register(require('./lib/modules/clipboard'))
+    this.register(require('./lib/modules/focus'))
+    this.register(require('./lib/modules/history'))
+    this.register(require('./lib/modules/selection'))
   }
 
-  register (module) {
-    const value = module(this)
-    if (value) this[module.name] = value
+  get selected () {
+    return this.blockList.filter(block => this.selection.has(block))
+  }
+
+  removeSelected () {
+    this.history.capture()
+    this.selected.forEach(block => this.blockList.remove(block))
   }
 }
 
-module.exports = Editor
+module.exports = SirTrevor
