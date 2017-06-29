@@ -151,6 +151,10 @@ body {
   padding: 0.5rem;
 }
 
+.ql-editor.selection-hidden *::selection {
+  background: transparent;
+}
+
 .ql-editor h1,
 .ql-editor p {
   margin: 0;
@@ -167,4 +171,9 @@ body {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+.selection {
+  padding: 0.25em 0;
+  background: #bce2ff;
 }
