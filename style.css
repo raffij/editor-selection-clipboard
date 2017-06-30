@@ -151,8 +151,8 @@ body {
   padding: 0.5rem;
 }
 
-.ql-editor:nth-child(1) *::selection {
-  background: transparent;
+.ql-editor *::selection {
+  /*background: transparent;*/
 }
 
 .ql-editor h1,
